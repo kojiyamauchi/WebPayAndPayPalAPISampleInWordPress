@@ -1,0 +1,383 @@
+@charset "UTF-8";
+@import "compass";
+/*==================================================================
+Reset & Default Setting CSS. for All Pages.
+===================================================================*/
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+address,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+pre,
+code,
+form,
+input,
+textarea,
+label,
+table,
+caption,
+tbody,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  position: relative;
+  width: 100%;
+  font-size: 100%;
+  /*16px*/
+  color: #000;
+  background: #fff;
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+.clear {
+  clear: both;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  background: transparent;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+  /*親要素の継承*/
+  @include opacity(1);
+}
+a.current {}
+img {
+  vertical-align: middle;
+}
+ol,
+ul,
+li {
+  list-style-type: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+textarea {
+  resize: vertical;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ ::selection {
+  background: RGBa();
+}
+ ::-moz-selection {
+  background: RGBa();
+}
+.displayPC {
+  display: block;
+}
+.displaySP {
+  display: none;
+}
+header {
+  width: 100%;
+  max-width: 970px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: rgb(150, 150, 150);
+  display: table;
+  p {
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+footer {
+  width: 100%;
+  max-width: 970px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: rgb(150, 150, 150);
+  display: table;
+  p {
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+#planDetail {
+  width: 100%;
+  max-width: 970px;
+  height: 175px;
+  display: table;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #F3F3F3;
+  h1 {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+#contents {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  background-color: rgb(230, 230, 230);
+  text-align: center;
+  h1 {
+    /*confirmPage only.*/
+    font-weight: bold;
+    padding: 30px 0 20px;
+  }
+  table {
+    width: 100%;
+    th {
+      width: 30%;
+      text-align: center;
+    }
+    td {
+      width: 70%;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      input {
+        border: 3px solid rgb(135, 135, 135);
+        border-radius: 3px;
+        width: 80%;
+        height: 40px;
+        text-indent: 0.75em;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .bootstrap-select {
+        border: 3px solid rgb(135, 135, 135);
+        border-radius: 3px;
+        width: 25% !important;
+        height: 40px;
+        &:nth-of-type(2) {
+          margin: 0 2%;
+        }
+        .selectpicker {
+          height: 100%;
+          border: none;
+          border-radius: 0;
+        }
+      }
+      output {
+        width: 25%;
+        display: inline-block;
+        background-color: #fff;
+        border: 3px solid rgb(135, 135, 135);
+        border-radius: 3px;
+        height: 40px;
+        line-height: 34px;
+        vertical-align: middle;
+      }
+    }
+  }
+  input.btnSend {
+    width: 50%;
+    font-weight: bold;
+    margin: 40px 0;
+    background-color: #BFBFBF;
+  }
+  h2.testcomplete {
+    padding: 0 0 100px;
+  }
+  form.payPalButton {
+    width: 50%;
+    float: left;
+    margin: 0 0 40px;
+    input.btnSend {
+      width: 75%;
+      background-color: #BFBFBF;
+      padding: 6px 0;
+      margin: 0 -5% 0 0;
+    }
+  }
+  form.webPayButton {
+    width: 50%;
+    float: right;
+    margin: 0 0 40px;
+    input[type=button] {
+      width: 75%;
+      height: auto;
+      color: #000;
+      background-color: #BFBFBF;
+      font-weight: bold;
+      padding: 6px 0;
+      margin: 0 0 0 -5%;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1.42857143;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+    }
+  }
+  p {
+    text-align: center;
+    a.btn {
+      width: 50%;
+      height: auto;
+      color: #000;
+      background-color: #BFBFBF;
+      font-weight: bold;
+      padding: 6px 0;
+      margin: 0;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1.42857143;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+    }
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  /* Safari Hack */
+  * {
+    /* Add Property */
+  }
+}
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+  /* Chrome Hack */
+  * {
+    /* Add Property */
+  }
+}
+@-moz-document url-prefix() {
+  /* FireFox Hack */
+  * {
+    /* Add Property */
+  }
+}
+@media all and (-ms-high-contrast:none) {
+  /* IE Hack */
+  * {
+    /* Add Property */
+  }
+}
+/*==================================================================
+  Responsive Media Queries
+  ===================================================================*/
+/*
+  @media screen and (min-width:2061x){ iMac 27inch.
+  }
+  @media screen and (min-width:1445px) and (max-width:2060px) { iMac 21.5inch.
+  }
+  @media screen and (min-width: 1285px) and (max-width:1444px)  { Large PC.
+  }
+  @media screen and (min-width: 992px) and (max-width:1284px) { Medium PC.
+  }
+  @media screen and (max-width: 991px) { Tablet.
+  }
+  */
+@media (max-width: 768px) {
+  /* Smart Phone. */
+  .displayPC {
+    display: none;
+  }
+  .displaySP {
+    display: block;
+  }
+}
+/*
+  @media screen and (max-width:480px) { Small Smart Phone2.
+  }
+  @media screen and (max-width:338px) { Small Smart Phone1.
+  }
+  */
