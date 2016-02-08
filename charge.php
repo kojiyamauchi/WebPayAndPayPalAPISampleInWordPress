@@ -69,7 +69,7 @@ try {
     echo 'Message is:'.$e->getMessage()."\n";
     exit('Error');
 }
-//ヒデジ Writing.
+//echo log.
 print_r($result);
 // 処理終了後、 https://webpay.jp/test/charges で課金が発生したことが分かります。
 ?>

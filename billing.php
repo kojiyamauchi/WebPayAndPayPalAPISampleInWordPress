@@ -44,7 +44,7 @@ if ($PaymentOption == 'PayPal') {
         //'
         //' This is set to the value entered on the Integration Assistant
         //'------------------------------------
-        $returnURL = 'http://kojiyamauchi.com/work/paymentTest/testcomplete';
+        $returnURL = 'add return URL';
 
         //'------------------------------------
         //' The cancelURL is the location buyers are sent to when they hit the
@@ -52,7 +52,7 @@ if ($PaymentOption == 'PayPal') {
         //'
         //' This is set to the value entered on the Integration Assistant
         //'------------------------------------
-        $cancelURL = 'http://kojiyamauchi.com/work/paymentTest/testcancel';
+        $cancelURL = 'add cancel URL';
 
         //'------------------------------------
         //' Calls the SetExpressCheckout API call
