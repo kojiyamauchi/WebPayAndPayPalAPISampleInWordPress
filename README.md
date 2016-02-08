@@ -1,1 +1,1 @@
-WebPay & PayPal API's Sample. in WordPress.
+webpay & paypal API's sample. in WordPress.
